@@ -1,10 +1,15 @@
- 
+@font-face {
+    font-family: 'myFirstFont';
+    src: url('./RobotoMono-VariableFont_wght.ttf');
+  }
 
 
 *{
 
+    
+
      
-    font-family: 'Helvetica 35 Thin', 'Times New Roman', Times, serif;
+    font-family:'Poppins', 'Times New Roman';
      
 
     color: white;
@@ -25,8 +30,27 @@
     border: 1px solid #4285F4;
 }
 
+.speakers-section{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;  
+    width: 100%;
+    position: relative;
+}
+
+.speakers-section::before{
+    content: '';
+    background: url('https://s3-alpha-sig.figma.com/img/3d59/244b/05fb099536fbe49dc7e27172ed08a7f3?Expires=1667174400&Signature=VhW2GeYASzqvVOj6jirSNqia7QdR-e1PxlFJciEW8RFPEJLdQh-pqHcgh8ZsXFzXgYXpTdSHIPLhvi8IxL46FNod78-nh4mj5Z9WmSEbVdHXVefHIJMv-uBKMxcT-~XBHccSF5QFZZF~9GMr9CaSkVWuqBeLx3j2XcvQ8gjkJlaw5wM4p5dlo8A8XvPFjLR6C8yhVpkY-jfTXhvqNAGVRrBzIeDi-9bO8c3WnT04KVmMR6fruX2BuixFKsZtn8N4A3UYlINtO0Y5PTdpBy-ylAXxedjsubUELK057CMhvfnyjRK~4ar5d89I68DTa6dlcL0LutQjKL7RDs8LDrTvzg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
 .hero-2 {
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(20, 21, 23, 0.95);
     color: #fff;
     height: 80vh;
     width: 100%;
@@ -88,3 +112,4 @@
     margin: auto;
     padding: 1rem;
 } */
+ 
