@@ -12,18 +12,87 @@
 </head>
 <body>
   <div>
+    <nav class="bg-[#202124]  nav top-0 w-full fixed z-12 shadow-lg">
+			<div class="max-w-6xl mx-auto px-4">
+				<div class="flex justify-between">
+					<div class="flex space-x-12">
+						<div>
+							<!-- Website Logo -->
+							<a href="#" class="flex items-center py-4 px-2">
+								<img src="devfest.png" alt="Logo" class="h-16 mr-2">
+								 
+							</a>
+						</div>
+						<!-- Primary Navbar items -->
+						<div class="hidden md:flex items-center space-x-8">
+							<a href="" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-[#4285F4]">Home</a>
+							<a href="#speakers" class="py-4 px-2 text-gray-500 font-semibold hover:text-[#4285F4] transition duration-300">Speakers</a>
+							<a href="#sponsors" class="py-4 px-2 text-gray-500 font-semibold hover:text-[#4285F4] transition duration-300">Sponsors</a>
+							<a href="#schedule" class="py-4 px-2 text-gray-500 font-semibold hover:text-[#4285F4]transition duration-300">Schedule</a>
+						</div>
+					</div>
+					<!-- Secondary Navbar items -->
+					<div class="hidden md:flex items-center space-x-3 ">
+            <a
+            href="https://t.co/0NHo7WT7gV"
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-[#4285F4] hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+            aria-label="Sign up"
+            title="Sign up"
+          >
+           RSVP
+          </a>
+						 
+					</div>
+					<!-- Mobile menu button -->
+					<div class="md:hidden flex items-center">
+						<button class="outline-none mobile-menu-button">
+						<svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+							x-show="!showMenu"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+					</div>
+				</div>
+			</div>
+			<!-- mobile menu -->
+			<div class="hidden mobile-menu">
+				<ul class="">
+					<li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-[#4285F4] font-semibold">Home</a></li>
+					<li><a href="#speakers" class="block text-sm px-2 py-4 hover:bg-[#4285F4] transition duration-300">Speakers</a></li>
+					<li><a href="#sponsors" class="block text-sm px-2 py-4 hover:bg-[#4285F4] transition duration-300">Sponsors</a></li>
+					<li><a href="#schedule" class="block text-sm px-2 py-4 hover:bg-[#4285F4] transition duration-300">Schedule</a></li>
+				</ul>
+			</div>
+			<script>
+				const btn = document.querySelector("button.mobile-menu-button");
+				const menu = document.querySelector(".mobile-menu");
 
-    <div class="bg-[#202124] nav top-0 w-full fixed z-12">
+				btn.addEventListener("click", () => {
+					menu.classList.toggle("hidden");
+				});
+			</script>
+		</nav>
+
+
+    <!-- <div class="bg-[#202124] nav top-0 w-full fixed z-12">
         <div class="px-4   py-5 mx-auto sm:max-w-xl md:max-w-full  lg:max-w-screen-xl md:px-24 lg:px-8">
           <div class="relative   flex items-center justify-between">
-            <a href="index.html" aria-label="Company" title="Company" class="inline-flex items-center">
+            <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
               <img class="h-16 " src="./devfest.png " alt="tr">
               
               
             </a>
             <ul class="flex items-center hidden space-x-8 lg:flex">
-              <li><a href="index.html" aria-label="Home" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Home</a></li>
+              <li><a href="/" aria-label="Home" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Home</a></li>
               <li><a href="#speakers" aria-label="Speakers" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Speakers</a></li>
+              <li><a href="/" aria-label="Schedule" title="Product pricing" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Schedule</a></li>
               <li><a href="#sponsors" aria-label="Sponsors" title="About us" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Sponsors</a></li>
               <li>
                 <a
@@ -37,7 +106,6 @@
               </li>
             </ul>
             <!-- Mobile menu -->
-<<<<<<< HEAD
             <div class="md:hidden flex items-center">
             
               <button
@@ -55,80 +123,27 @@
                   stroke="currentColor"
                 >
                 <path d="M4 6h16M4 12h16M4 18h16"></path>
-=======
-            <div class="lg:hidden">
-              <button aria-label="Open Menu" title="Open Menu" class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
-                <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
-                  <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
-                  <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
->>>>>>> 403d4ee309dc59d1fd685a213dd1592bd6c785af
                 </svg>
               </button>
-              <!-- Mobile menu dropdown
-              <div class="absolute top-0 left-0 w-full">
-                <div class="p-5 bg-white border rounded shadow-sm">
-                  <div class="flex items-center justify-between mb-4">
-                    <div>
-                      <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-                        <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
-                          <rect x="3" y="1" width="7" height="12"></rect>
-                          <rect x="3" y="17" width="7" height="6"></rect>
-                          <rect x="14" y="1" width="7" height="6"></rect>
-                          <rect x="14" y="11" width="7" height="12"></rect>
-                        </svg>
-                        <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
-                      </a>
-                    </div>
-                    <div>
-                      <button aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                        <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                          <path
-                            fill="currentColor"
-                            d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                          ></path>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <nav>
-                    <ul class="space-y-4">
-                      <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Product</a></li>
-                      <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Features</a></li>
-                      <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Pricing</a></li>
-                      <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">About us</a></li>
-                      <li>
-                        <a
-                          href="/"
-                          class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Sign up
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              -->
             </div>
+
+            
           </div>
         </div>
        
       </div>
-      </div>
+      </div> -->
 
       <!-- hero section -->
 
-      <div style="background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://s3-alpha-sig.figma.com/img/a094/4fb2/7bdf67e67a125048d23ea1f43e2d8457?Expires=1668988800&Signature=HgAGTb3TBrFAodp-Yp9cdXXY2U4eANOOVvzxd9WBFyxKprlACrincGDWxmsJZXaN0Tx2cNp1K8B2mMCuYOkPCjXcjM81GMG9EtCF27MAtLMDzd840GInUFWtgcsPRm4x3dUzWW7~w9Ve3q8uKNlfsut6uZ2yTtxgw4GxvFJK-KGomDfriI7fazd8XfBp8IphlKjYUbNiIwDqI2u~4pw-GERyuxwV2p1xDuwkbkEfdufzhgtN40B~d4ti-z4FO0bRAgu91MR0Msrt06Xa3uxfa~RlPAympl10hLdfw0JLFX2wyxUrkdKfYLX4X7uOaDrfO26i8qQGOJ5ywvi-jBaqgA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)" class="bg-black mt-20 hero ">
+      <div style="background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(https://s3-alpha-sig.figma.com/img/a094/4fb2/7bdf67e67a125048d23ea1f43e2d8457?Expires=1668988800&Signature=HgAGTb3TBrFAodp-Yp9cdXXY2U4eANOOVvzxd9WBFyxKprlACrincGDWxmsJZXaN0Tx2cNp1K8B2mMCuYOkPCjXcjM81GMG9EtCF27MAtLMDzd840GInUFWtgcsPRm4x3dUzWW7~w9Ve3q8uKNlfsut6uZ2yTtxgw4GxvFJK-KGomDfriI7fazd8XfBp8IphlKjYUbNiIwDqI2u~4pw-GERyuxwV2p1xDuwkbkEfdufzhgtN40B~d4ti-z4FO0bRAgu91MR0Msrt06Xa3uxfa~RlPAympl10hLdfw0JLFX2wyxUrkdKfYLX4X7uOaDrfO26i8qQGOJ5ywvi-jBaqgA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)" class="bg-black py-10  hero ">
 
-      <div class=" mt-16 grid grid-cols-1 md:grid-cols-2 md:gap-14  md:px-4 md:py-5 mx-auto sm:max-w-xl md:max-w-full  lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div class=" grid grid-cols-1 md:grid-cols-2 md:gap-14  md:px-4 md:py-16 mx-auto sm:max-w-xl md:max-w-full  lg:max-w-screen-xl md:px-24 lg:px-8">
         <div class="mt-6 p-5">
           <h1 class="text-4xl"><span class="text-[#4285F4]">D</span>ev<span class="text-[#34A853]">F</span>est <span class="text-[#FBBC04]">W</span>estern <span class="text-[#EA4335]">K</span>enya</h1>
           <p class="mt-3 text-lg">GDG Kisumu && GDG Kisii work together by bringing you an amazing experience by hosting a version of Kenya's Largest Developer Events</p>
            
-           <div class=" flex mt-5  justify-between">
+           <div class=" flex mt-5 space-around justify-between">
             <a
             href="https://t.co/0NHo7WT7gV"
             class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white bg-[#4285F4] hover:bg-[#34A853] transition duration-200 rounded-full shadow-md bg-c hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
@@ -140,7 +155,7 @@
 
           <a
           href="https://sessionize.com/devfest-western-kenya-2022/"
-          class="btn inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-[#4285F4] transition duration-200 rounded-full shadow-md bg-transparent hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+          class="btn inline-flex items-center ml-5 justify-center h-12 px-6 font-medium tracking-wide text-[#4285F4] transition duration-200 rounded-full shadow-md bg-transparent hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
           aria-label="Sign up"
           title="Sign up"
         >
@@ -172,8 +187,7 @@
     </div>
   </div>
    <!--  speakers section -->
-
-
+ 
 <div id="speakers" class="   speakers-section" > 
   <div class="fancy-bg"></div>
   <div class="px-4  py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
@@ -181,55 +195,112 @@
       <p class="inline-block px-3 py-px mb-4 text-5xl   tracking-wider text-[#E8EAED] rounded-full  ">
        Speakers
       </p>
+     
     </div>
     <div class="grid gap-14 p-5 mx-auto lg:max-w-screen-lg grid-cols-2 lg:grid-cols-4">
-
       <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 h-20 w-20 mb-2 rounded-full shadow" src="./assets/kimani.webp" alt="Person" />
+        <img class="object-cover md:w-40 md:h-40   w-20 h-20 mb-2 rounded-full shadow" src="https://io.google/2022/speakers/8974ac8b-07dd-4e4c-82e5-36b4d89ebd69_500.webp" alt="Person" />
         <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">John Kimani</p>
-          <p class="text-sm text-white">Program Manager</p>
-          <p class="text-sm text-white">Developer Ecosystem Team</p>
+          <p class="text-xl   font-bold">John Kimani</p>
+          <p class="md:text-lg font-bold">Keynote</p>
+
+          <p class="text-sm text-white">Program Manager, Google</p>
+          
         </div>
       </div>
       <div class="flex flex-col items-center">
         <img class="object-cover h-20 w-20 md:w-40 md:h-40 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/ed38-0o0o0-GBh5HHR9FJVcn7roynwMyx.png" alt="Person" />
         <div class="flex flex-col text-center items-center">
-          <p class="text-lg  font-bold">
+          <p class="text-xl  font-bold">
             Aliane Abdenour </p>
-          <p class="text-sm text-white">Cloud GDE, Teacher, Entrepreneur, GDG Tizi Ouzou organizer</p>
+          <p class="text-sm text-white">Cloud GDE, GDG Tizi Ouzou organizer</p>
         </div>
       </div>
       <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="./assets/james-mwai.jpg" alt="Person" />
+        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://sessionize.com/image/c2c9-0o0o0-8fd4fb62-4f00-4a32-8f8d-5d9d8955e205.jpg?download=james-mwai.jpg" alt="Person" />
         <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">James Mwai</p>
+          <p class="text-xl font-bold">James Mwai</p>
           <p class="text-sm text-white">GDE and CTO Sky.Garden</p>
         </div>
       </div>
       <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 h-20 w-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/dac3-0o0o0-pzyRae4FtCGcvZUKhGS9Xf.jpg" alt="Person" />
+        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/74a5-0o0o0-3Veb16fP6YPiAuitMcwD8j.jpg" alt="Person" />
         <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">Maina Wycliffe</p>
-          <p class="text-sm text-white">Typescript Aficionado</p>
-        </div>
-      </div>
-          
-      <div class="flex flex-col items-center">
-        <img class="object-cover h-20 w-20 md:w-40 md:h-40 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/b8d0-0o0o0-hDwqCs53sFS4MxxhyGtDKs.png" alt="Person" />
-        <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">Atieno Ouma</p>
-          <p class="text-sm text-white">Juubix,Backend Developer</p>
+          <p class="text-xl font-bold">Emeka Boris Ama</p>
+          <p class="text-sm text-white">Data Science Course Instructor at Simpliv and Datacamp</p>
         </div>
       </div>
       <div class="flex flex-col items-center">
         <img class="object-cover h-20 w-20 md:w-40 md:h-40 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/e48c-0o0o0-8e-51ca-41ea-8ce5-e31a1b0978c6.54977ba3-e66b-4d34-85b9-6a0191af5e79.jpg" alt="Person" />
         <div class="flex flex-col text-center items-center">
-          <p class="text-lg  font-bold">Olorunfemi Davis</p>
+          <p class="text-xl  font-bold">Olorunfemi Davis</p>
           <p class="text-sm text-white">Software Engineer, i.Sec</p>
         </div>
       </div>
 
+      <div class="flex flex-col items-center">
+        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/b610-0o0o0-B4stfQUCfBySzuvatXbEoV.png" alt="Person" />
+        <div class="flex flex-col text-center items-center">
+          <p class="text-xl font-bold">Marvin Collins</p>
+          <p class="text-sm text-white">Apps:Lab KE</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="object-cover md:w-40 md:h-40 h-20 w-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/dac3-0o0o0-pzyRae4FtCGcvZUKhGS9Xf.jpg" alt="Person" />
+        <div class="flex flex-col text-center items-center">
+          <p class="text-xl font-bold">Maina Wycliffe</p>
+          <p class="text-sm text-white">Typescript Aficionado</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/ae40-0o0o0-RV9FnhsMWDkCRmKgr3GoAv.png" alt="Person" />
+        <div class="flex flex-col text-center items-center">
+          <p class="text-xl font-bold">Kyendereta Chantelle</p>
+          <p class="text-sm text-white">UI/UX Designer</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://sessionize.com/image/4abd-0o0o0-HeaKNUr62LtLBpXJBXCWa5.jpg?download=oyugo-obonyo.jpg" alt="Person" />
+        <div class="flex flex-col text-center items-center">
+          <p class="text-xl font-bold">Oyugo Obonyo</p>
+          <p class="text-sm text-white">Backend Engineer, Wezacare Solutions</p>
+        </div>
+      </div>
+     
+      <div class="flex flex-col items-center">
+        <img class="object-cover md:w-40 md:h-40 md:hover:w-60 md:hover:h-60 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/965e-0o0o0-h59iJmrkEKKXMufHC25wPK.JPG" alt="Person" />
+        <div class="flex flex-col text-center items-center">
+          <p class="text-xl font-bold">Agesa Collins</p>
+          <p class="text-sm text-white">Android Engineer, Wezacare Solutions</p>
+          
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="object-cover md:w-40 md:h-40 h-20 w-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/0f5a-0o0o0-Sxqwsi1bw6LrWzZjvbsmSV.jpg" alt="Person" />
+        <div class="flex flex-col text-center items-center">
+          <p class="text-xl font-bold">Robinson Bill</p>
+          <p class="text-sm text-white">Bengo HUB, Founder</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <img class="object-cover h-20 w-20 md:w-40 md:h-40 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/b8d0-0o0o0-hDwqCs53sFS4MxxhyGtDKs.png" alt="Person" />
+        <div class="flex flex-col text-center items-center">
+          <p class="text-xl font-bold">Atieno Ouma</p>
+          <p class="text-sm text-white">Juubix,Backend Developer</p>
+        </div>
+      </div>
+     
+     
+     
+      <div class="flex flex-col items-center">
+        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/ebc4-0o0o0-SZURyjhcWpdUXDSXeWdGyP.jpg" alt="Person" />
+        <div class="flex flex-col text-center items-center">
+          <p class="text-xl font-bold">
+            Yvvon Jemmy </p>
+          <p class="text-sm text-white">IoT specialist and Data engineer</p>
+        </div>
+      </div>
+      
       <div class="flex flex-col items-center">
         <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/76ff-0o0o0-GYDdrWVwiVugr88bsTv777.jpg" alt="Person" />
         <div class="flex flex-col text-center items-center">
@@ -237,21 +308,7 @@
           <p class="text-sm text-white">Open source Advocate</p>
         </div>
       </div>
-      <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 md:hover:w-60 md:hover:h-60 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/965e-0o0o0-h59iJmrkEKKXMufHC25wPK.JPG" alt="Person" />
-        <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">Agesa Collins</p>
-          <p class="text-sm text-white">Android Engineer</p>
-          <p class="text-sm text-white">WezaCare Solutions</p>
-        </div>
-      </div>
-      <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/ae40-0o0o0-RV9FnhsMWDkCRmKgr3GoAv.png" alt="Person" />
-        <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">Kyendereta Chantelle</p>
-          <p class="text-sm text-white">UI/UX Designer</p>
-        </div>
-      </div>
+      
       <div class="flex flex-col items-center">
         <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/1b32-0o0o0-afvgSgzh31Y4Dcf6ugMctE.jpg" alt="Person" />
         <div class="flex flex-col text-center items-center">
@@ -259,58 +316,70 @@
           <p class="text-sm text-white">Electrical Engineer to Tech field</p>
         </div>
       </div>
-      <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/ebc4-0o0o0-SZURyjhcWpdUXDSXeWdGyP.jpg" alt="Person" />
-        <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">
-            Yvvon Jemmy </p>
-          <p class="text-sm text-white">IoT specialist and Data engineer</p>
-        </div>
-      </div>
-      <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/74a5-0o0o0-3Veb16fP6YPiAuitMcwD8j.jpg" alt="Person" />
-        <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">Emeka Boris Ama</p>
-          <p class="text-sm text-white">Data Science Course Instructor at Simpliv and Datacamp</p>
-        </div>
-      </div>
+     
       
-      <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 h-20 w-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/0f5a-0o0o0-Sxqwsi1bw6LrWzZjvbsmSV.jpg" alt="Person" />
-        <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">Robinson Bill</p>
-          <p class="text-sm text-white">Bengo HUB, Founder</p>
-        </div>
-      </div>
-      <div class="flex flex-col items-center">
-        <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="https://cache.sessionize.com/image/b610-0o0o0-B4stfQUCfBySzuvatXbEoV.png" alt="Person" />
-        <div class="flex flex-col text-center items-center">
-          <p class="text-lg font-bold">Marvin Collins</p>
-          <p class="text-sm text-white">Apps:Lab KE</p>
-        </div>
-      </div>
+      
     </div>
   </div>
   
 </div>
 
 <!-- schedule section -->
-
  
 
+
+
 <!-- sponsors section -->
-<div  class='hero-4'>
-  <div name="home" class='content'>    
+<div id="sponsors" class='hero-4'>
+  <div name="home" class='content'>
+    
       <p class='search-text text-3xl md:text-5xl'> Be the reason  a techie acquires <span class="text-[#4285F4]">knowledge</span> while they  <span class="text-[#FBBC04]">network</span>,
-      get updated on <span class="text-[#EA4335]">new trends</span> and find <span class="text-[#34A453]">inspiration</span> this DevFest.</p>      
+      get updated on <span class="text-[#EA4335]">new trends</span> and find <span class="text-[#34A453]">inspiration</span> this DevFest.</p>
+
+       
+
+      
+
+      
   </div>
+ 
 </div>
 
-
-<div  class="   speakers-section" > 
+<div class=" bg-[#202124]"> 
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-4 lg:py-10">
+  
+  <div class="grid gap-10 mx-auto lg:max-w-screen-lg grid-cols-2 lg:grid-cols-4">
+    <div class="flex flex-col  items-center">
+      <img class="object-cover rounded-full w-20 h-20 mb-2" src="https://www.figma.com/file/zZ2NdJQX46SPoHQnuAsCiR/image/e8582c681119df6fcd4d767af9e1f5388c99dae9?fuid=906455884025021426" alt="Person" />
+      
+    </div>
+    <div class="flex flex-col items-center">
+      <img class="object-cover w-20 h-20 mb-2 rounded-full  " src="https://cdn.dribbble.com/users/2214143/screenshots/18065378/meta_logo_animation_4x.png" alt="Person" />
+      
+    </div>
+    <div class="flex flex-col items-center">
+      <img class="object-cover rounded-full w-20 h-20 mb-2 " src="https://1000logos.net/wp-content/uploads/2018/02/Logo-Tesla.jpg" alt="Person" />
+       
+    </div>
+    <div class="flex flex-col items-center">
+      <img class="object-cover w-25 h-20 mb-2  " src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Person" />
+       
+    </div>
+     
+  </div>
+</div>
+</div>
+<div id="speakers" class="   speakers-section" > 
  
   <div class="px-4  py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
 
+    <div class="text-black flex flex-col md:items-center f-f-l pt-3">
+      <h1 tabindex="0" class="focus:outline-none dark:text-white text-center md:text-4xl text-2xl font-black">This event is brought to you by... </h1>
+      <div class="md:flex space-around flex items-center mt-5 md:mt-10 text-base text-color f-f-l">
+        <img class="mr-9 md:h-20 h-10 " src="https://s3-alpha-sig.figma.com/img/4d24/ab37/a6036aec004ad0389c947303c9666cba?Expires=1668988800&Signature=N5C8INVPRvXejdAkvQtSQAosTo6gSpbYSAAiDqYkHc7AqbT75-qZVAmxzHBL4WXTYNWhceh~bYtkRC0xJbJJcDaeJjuzvG-aohdZFzAKfZz4ZWhItzrLY7aUOMVYaoxxavN9s2JA3NYdxe9kClWdQmkBsmiGDrFNa236wcfgWsITx-DuYNXBdLcKVGOBGm4VFCbzraa1~2qt6echIxdT1q2KIk2elWxrMbyAdxOEA0E~73JBEAdsWX1W6tWf~Z3eS-b00-p-P4r8OsHpOAntOfVPpjgw-kxcIgR3cop1x5NoopWuUWnedzn7WuilCYifq6KqlRjNY4LbGRfA9UeaVg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="logo">
+        <img class="md:h-16 h-7" src="https://s3-alpha-sig.figma.com/img/f866/25c6/a0d23a0548132285122429eb6c664e48?Expires=1668988800&Signature=PkeYXg29SE2saskdvHZ3UzMPFxlkrVDDT37adNs4WjorIWDVNp9172l-ZMHUOLWn8ID7Hl3ZtNKtsPxWxpgCnWeSKoN080QXXlPeDbb-rl-~uLeguOrjOp6n2kE5nOyoUZeZIg-cp~xOm47bnm6rk90tcUWjGJQAQPiF4De4n2idf8zSAuB1tYLS3Sb11GxjZvD7aCpgIMjhhb95zENGZLzf9eqBVvMeTlbz2eN4fl2iRj~8UW39s09ybl3n1w-IXzk8uuXYT6xqIL~8V0ycG8RahlGWzabbGX2YT0RWSP6~6Vy2y~mmVtVrrKu1JZBz6mDnzHO4Gp0rfLtLyXVrmA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="logo">
+        <img class="md:h-14 ml-7 h-7" src="https://s3-alpha-sig.figma.com/img/da07/bb8a/b7597fea1d18364d3104100fd9664add?Expires=1668988800&Signature=ERNYcb~ly2Oi5jHI3FC9aZIanP2UJbmvxoVY6TH-gUkGsnTynNAZZ7pQCd-mu7gSRdodMKM550san3Q675GR03MGSnfF81NTXF-x2A0gPtDnLOCiwC2F32GbREMiJ1SvPZpfAzWrrzGS7TPsLQai6cgT1ue0nYsqrktrQmbAtzEzFIpz03mtxxIeh7uwzEG~taNN5kW3tBODxutG6fhGJpZklMO3fhZww7YynhTqsXD4UsMuVNChyg~BjCtySQURPhQJ-U5Y5S-S4l4r42Lk~Y9biCmI-Mbl8NlX9RvQIRdLFCtSsOcw-fGtLx2QWuMiEZi-v5Nyy1Ol5AEAtfcT9w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="logo">
+      </div>
 
     
   </div>
@@ -327,7 +396,7 @@
         <img class="object-cover md:w-40 md:h-40 w-20 h-20 mb-2 rounded-full shadow" src="./assets/collins - GDG KISII.jpg" alt="Person" />
         <div class="flex flex-col text-center items-center">
           <p class="text-lg font-bold">Collins Jumah</p>
-          <p class="text-sm text-white">GDG KISII</p>
+           
         </div>
       </div>
       <div class="flex flex-col items-center">
@@ -431,21 +500,30 @@
 
 <!-- footer -->
  
-<div class="bg-black py-12 px-4">
- 
-  <div class="text-black flex flex-col md:items-center f-f-l pt-3" id="sponsors" >
-    <h1 tabindex="0" class="focus:outline-none dark:text-white text-center md:text-4xl text-2xl font-black">This event is brought to you by... </h1>
-    <div class="md:flex space-around flex items-center mt-5 md:mt-10 text-base text-color f-f-l">
-      <img class="mr-9 md:h-20 h-10 " src="https://s3-alpha-sig.figma.com/img/4d24/ab37/a6036aec004ad0389c947303c9666cba?Expires=1668988800&Signature=N5C8INVPRvXejdAkvQtSQAosTo6gSpbYSAAiDqYkHc7AqbT75-qZVAmxzHBL4WXTYNWhceh~bYtkRC0xJbJJcDaeJjuzvG-aohdZFzAKfZz4ZWhItzrLY7aUOMVYaoxxavN9s2JA3NYdxe9kClWdQmkBsmiGDrFNa236wcfgWsITx-DuYNXBdLcKVGOBGm4VFCbzraa1~2qt6echIxdT1q2KIk2elWxrMbyAdxOEA0E~73JBEAdsWX1W6tWf~Z3eS-b00-p-P4r8OsHpOAntOfVPpjgw-kxcIgR3cop1x5NoopWuUWnedzn7WuilCYifq6KqlRjNY4LbGRfA9UeaVg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="logo">
-      <img class="md:h-16 h-7" src="https://s3-alpha-sig.figma.com/img/f866/25c6/a0d23a0548132285122429eb6c664e48?Expires=1668988800&Signature=PkeYXg29SE2saskdvHZ3UzMPFxlkrVDDT37adNs4WjorIWDVNp9172l-ZMHUOLWn8ID7Hl3ZtNKtsPxWxpgCnWeSKoN080QXXlPeDbb-rl-~uLeguOrjOp6n2kE5nOyoUZeZIg-cp~xOm47bnm6rk90tcUWjGJQAQPiF4De4n2idf8zSAuB1tYLS3Sb11GxjZvD7aCpgIMjhhb95zENGZLzf9eqBVvMeTlbz2eN4fl2iRj~8UW39s09ybl3n1w-IXzk8uuXYT6xqIL~8V0ycG8RahlGWzabbGX2YT0RWSP6~6Vy2y~mmVtVrrKu1JZBz6mDnzHO4Gp0rfLtLyXVrmA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="logo">
-      <img class="md:h-14 ml-7 h-7" src="https://s3-alpha-sig.figma.com/img/da07/bb8a/b7597fea1d18364d3104100fd9664add?Expires=1668988800&Signature=ERNYcb~ly2Oi5jHI3FC9aZIanP2UJbmvxoVY6TH-gUkGsnTynNAZZ7pQCd-mu7gSRdodMKM550san3Q675GR03MGSnfF81NTXF-x2A0gPtDnLOCiwC2F32GbREMiJ1SvPZpfAzWrrzGS7TPsLQai6cgT1ue0nYsqrktrQmbAtzEzFIpz03mtxxIeh7uwzEG~taNN5kW3tBODxutG6fhGJpZklMO3fhZww7YynhTqsXD4UsMuVNChyg~BjCtySQURPhQJ-U5Y5S-S4l4r42Lk~Y9biCmI-Mbl8NlX9RvQIRdLFCtSsOcw-fGtLx2QWuMiEZi-v5Nyy1Ol5AEAtfcT9w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="logo">
+<div class="bg-black  ">
+  <div class="grid md:gap-7 grid-cols-3 px-4  py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
+    <div>
+      <p class="md:text-5xl">
+        Have any inquiries, feel free to reach out.
+
+      </p>
+      <a
+      href="https://t.co/0NHo7WT7gV"
+      class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-full shadow-md bg-[#4285F4] hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+      aria-label="Sign up"
+      title="Sign up"
+    >
+     RSVP
+    </a>
     </div>
-           
-          <div class="text-sm mt-6 text-color mb-10 f-f-l">
-              <p tabindex="0" class="dark:text-white text-center focus:outline-none">Made with love for the community</p>
-          </div>
-      </div>
-      <div class="w-9/12 h-0.5 bg-gray-100 dark:bg-gray-700 rounded-full"></div>
+    <div>
+      <img class="mr-9 md:h-20 h-10 " src="https://s3-alpha-sig.figma.com/img/4d24/ab37/a6036aec004ad0389c947303c9666cba?Expires=1668988800&Signature=N5C8INVPRvXejdAkvQtSQAosTo6gSpbYSAAiDqYkHc7AqbT75-qZVAmxzHBL4WXTYNWhceh~bYtkRC0xJbJJcDaeJjuzvG-aohdZFzAKfZz4ZWhItzrLY7aUOMVYaoxxavN9s2JA3NYdxe9kClWdQmkBsmiGDrFNa236wcfgWsITx-DuYNXBdLcKVGOBGm4VFCbzraa1~2qt6echIxdT1q2KIk2elWxrMbyAdxOEA0E~73JBEAdsWX1W6tWf~Z3eS-b00-p-P4r8OsHpOAntOfVPpjgw-kxcIgR3cop1x5NoopWuUWnedzn7WuilCYifq6KqlRjNY4LbGRfA9UeaVg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="logo">
+    </div>
+    <div>
+      <img class="md:h-20 md:ml-7 h-10" src="https://s3-alpha-sig.figma.com/img/da07/bb8a/b7597fea1d18364d3104100fd9664add?Expires=1668988800&Signature=ERNYcb~ly2Oi5jHI3FC9aZIanP2UJbmvxoVY6TH-gUkGsnTynNAZZ7pQCd-mu7gSRdodMKM550san3Q675GR03MGSnfF81NTXF-x2A0gPtDnLOCiwC2F32GbREMiJ1SvPZpfAzWrrzGS7TPsLQai6cgT1ue0nYsqrktrQmbAtzEzFIpz03mtxxIeh7uwzEG~taNN5kW3tBODxutG6fhGJpZklMO3fhZww7YynhTqsXD4UsMuVNChyg~BjCtySQURPhQJ-U5Y5S-S4l4r42Lk~Y9biCmI-Mbl8NlX9RvQIRdLFCtSsOcw-fGtLx2QWuMiEZi-v5Nyy1Ol5AEAtfcT9w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="logo">
+    </div>
+      
+      
       
   </div>
 </div>
